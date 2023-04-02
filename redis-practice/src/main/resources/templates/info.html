@@ -152,6 +152,7 @@
         // 查询用户信息
         axios.get("/user/me")
           .then(({data}) => {
+            console.log(data)
             // 保存用户
             this.user = data;
             // 查询用户详情

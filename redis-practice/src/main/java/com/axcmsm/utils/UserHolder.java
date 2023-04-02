@@ -1,7 +1,10 @@
 package com.axcmsm.utils;
 
 
+//import com.axcmsm.dto.UserDTO;
+
 import com.axcmsm.dto.UserDTO;
+import com.axcmsm.entity.User;
 
 public class UserHolder {
     private static final ThreadLocal<UserDTO> tl = new ThreadLocal<>();
