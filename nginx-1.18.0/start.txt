@@ -1,0 +1,3 @@
+nginx -s reload #重启
+nginx -s start #启动
+nginx -s stop #关闭
