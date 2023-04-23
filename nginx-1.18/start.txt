@@ -1,3 +1,5 @@
 nginx -s reload #重启
 nginx -s start #启动
 nginx -s stop #关闭
+
+## 注意如果nginx 无法启动，请手动创建temp文件
