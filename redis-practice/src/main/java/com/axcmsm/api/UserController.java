@@ -1,6 +1,7 @@
 package com.axcmsm.api;
 
 
+import cn.hutool.core.bean.BeanUtil;
 import com.axcmsm.dto.LoginFormDTO;
 import com.axcmsm.dto.Result;
 import com.axcmsm.dto.UserDTO;
@@ -76,5 +77,15 @@ public class UserController {
         info.setUpdateTime(null);
         // 返回
         return Result.ok(info);
+    }
+
+    @GetMapping("/{id}")
+    public Result queryUserById(@PathVariable("id") Long userId){
+        User user = userService.getById(userId);
+        if (user!=null) {
+            return Result.ok();
+        }
+        UserDTO userDTO = BeanUtil.copyProperties(user, UserDTO.class);
+        return Result.ok(userDTO);
     }
 }

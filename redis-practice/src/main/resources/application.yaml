@@ -1,5 +1,6 @@
 server:
   port: 8081
+
 spring:
   application:
     name: axcmsm
@@ -25,3 +26,4 @@ mybatis-plus:
 logging:
   level:
     com.hmdp: debug
+
